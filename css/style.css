@@ -221,6 +221,15 @@ h1{
 	margin: 0;
 }
 
+h3{
+	font-size: 2rem;
+	color: rgb(47, 252, 241);
+}
+
+a{
+	text-decoration: none;
+}
+
 p{
 	font-size: 1.3rem;
 	margin: 2vh;
@@ -234,6 +243,30 @@ p{
 #assignments-list{
 	margin: 0;
 	padding: 0;
+}
+
+.assignment1-description{
+	width: 0.2vw;
+	display: inline-block;
+}
+
+.body-link{
+	color: rgb(47, 252, 241);
+}
+
+#assignment1-image-box{
+	display: flex;
+	text-align: center;
+	position: fixed;
+	margin-right: 4vw;
+	width: 90%;
+	justify-content: center;
+}
+
+.as1-image{
+	width: 15vw;
+	margin-right: 3vw;
+	margin-left: 3vw;
 }
 
 
