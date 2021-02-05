@@ -250,6 +250,11 @@ p{
 	display: inline-block;
 }
 
+.assignment2-description{
+	width: 0.2vw;
+	display: inline-blocks;
+}
+
 .body-link{
 	color: rgb(47, 252, 241);
 }
@@ -267,6 +272,39 @@ p{
 	width: 15vw;
 	margin-right: 3vw;
 	margin-left: 3vw;
+}
+
+#assignment2-image-box{
+	display: flex;
+	text-align: center;
+	position: fixed;
+	margin-right: 4vw;
+	width: 90%;
+	justify-content: center;
+}
+
+.as2-image{
+	width: 9vw;
+	margin-right: 3vw;
+	margin-left: 3vw;
+}
+
+.as2-task-description{
+	font-family: Cabin;
+	font-size: 0.9rem;
+}
+
+.as2-double-image{
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+}
+
+.as2-image-double{
+	width: 9vw;
+	margin-right: 1vw;
+	margin-left: 1vw;
 }
 
 
