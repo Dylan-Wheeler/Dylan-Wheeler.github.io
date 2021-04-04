@@ -326,6 +326,10 @@ p{
 	margin: 1vw;
 }
 
+#a7video{
+	width: 50vw;
+}
+
 /*-- Mobile Changes --*/
 @media only screen and (max-width: 650px) {
 
