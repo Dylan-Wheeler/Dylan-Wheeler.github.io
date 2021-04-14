@@ -13,17 +13,17 @@ function updateAudio() {
     audio_element.setAttribute('src', audio_path);
 
     audio_element.currentTime = current_time;
-    if (audio_path != '00000') audio_element.play();
+    if (audio_path != '../audio/00000.wav') audio_element.play();
 }
 
 function getAudioPath() {
     var placeholder_path = '../audio/';
 
-    drums ? placeholder_path += '1' : placeholder_path += '0';
-    bass ? placeholder_path += '1' : placeholder_path += '0';
-    synth ? placeholder_path += '1' : placeholder_path += '0';
-    piano ? placeholder_path += '1' : placeholder_path += '0';
-    melody ? placeholder_path += '1' : placeholder_path += '0';
+    placeholder_path += drums ? '1' : '0';
+    placeholder_path += bass ? '1' : '0';
+    placeholder_path += synth ? '1' : '0';
+    placeholder_path += piano ? '1' : '0';
+    placeholder_path += melody ? '1' : '0';
 
     placeholder_path += '.wav';
 
@@ -38,27 +38,27 @@ document.addEventListener('DOMContentLoaded', function () {
     var melody_checkbox = document.getElementById("check4");
 
     drums_checkbox.addEventListener('change', function () {
-        drums_checkbox.checked ? drums = true : drums = false;
+        drums = drums_checkbox.checked ? true : false;
         updateAudio();
     });
 
     bass_checkbox.addEventListener('change', function () {
-        bass_checkbox.checked ? bass = true : bass = false;
+        bass = bass_checkbox.checked ? true : false; 
         updateAudio();
     });
 
     synth_checkbox.addEventListener('change', function () {
-        synth_checkbox.checked ? synth = true : synth = false;
+        synth = synth_checkbox.checked ? true : false;
         updateAudio();
     });
 
     piano_checkbox.addEventListener('change', function () {
-        piano_checkbox.checked ? piano = true : piano = false;
+        piano = piano_checkbox.checked ? true : false;
         updateAudio();
     });
 
     melody_checkbox.addEventListener('change', function () {
-        melody_checkbox.checked ? melody = true : melody = false;
+        melody = melody_checkbox.checked ? true : false;
         updateAudio();
     });
 });
