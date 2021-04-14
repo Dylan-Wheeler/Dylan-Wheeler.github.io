@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Dylan Wheeler</title>
-	<script src="../js/index.js"> </script>
 	<script src="https://use.fontawesome.com/c7bdd359dc.js"></script>
 	<link rel="icon" href="../images/websiteicon_optimized.png">
 	<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -29,13 +28,53 @@
 			</nav>
 		</div>
 		<div id="body-container">
-			<h1>Assignment 5</h1>
+			<h1>Final Project</h1>
 			<p class="assignment-description">
-                For this assignment, we were tasked with creating a radio play using a provided script. During a zoom meeting, my group recorded our lines
-                which I then edited myself using Ableton Live to fix audio issues and add in sound effects provided by my other group members.
+                
 			</p>
-            <audio controls>
-                <source src="../audio/ART321 Radio Play.wav" type="audio/wav">
+            <ul id="final_buttons">
+                <li class="final_button">
+                    <p>Drums</p>
+                    <label class="switch">
+                        <input type="checkbox" id="check0">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+
+                <li class="final_button">
+                    <p>Bass</p>
+                    <label class="switch">
+                        <input type="checkbox" id="check1">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+
+                <li class="final_button">
+                    <p>Synth</p>
+                    <label class="switch">
+                        <input type="checkbox" id="check2">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+
+                <li class="final_button">
+                    <p>Piano</p>
+                    <label class="switch">
+                        <input type="checkbox" id="check3">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+
+                <li class="final_button">
+                    <p>Melody</p>
+                    <label class="switch">
+                        <input type="checkbox" id="check4">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+            </ul>
+            <audio id="final_audio" controls loop>
+                <source src="../audio/00000.wav" type="audio/wav">
                 <p>Your browser does not support the audio tag.</p>
             </audio>
 		</div>
@@ -46,5 +85,6 @@
 			</a>
 		</p>
 	</div>
+    <script src="../js/index.js"> </script>
 </body>
 </html>
