@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Dylan Wheeler</title>
-    <!-- Just to get the fonts correctly, not for any actual javascript functionality -->
+    <!-- Just to get some icons correctly, not for any actual javascript functionality -->
     <script src="https://use.fontawesome.com/c7bdd359dc.js"></script>
     <link rel="icon" href="/images/websiteicon_optimized.png" />
     <link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
@@ -11,10 +11,10 @@
   <body>
     <div class="overlay"></div>
     <div class="wrapper">
-      <div id="header">
-        <h2 id="title" class="animate">Dylan Wheeler</h2>
-        <nav id="header-bar" class="animate">
-          <ul id="header-list">
+      <div id="header" class="no-header-bar">
+        <h2 class="title title-large">Dylan Wheeler</h2>
+        <nav id="header-bar">
+          <ul class="header-list header-list-large">
             <li class="header-list-item">
               <a href="/about.html" class="header-text header-item">About</a>
             </li>
@@ -26,6 +26,11 @@
             <li class="header-list-item">
               <a href="/hobbies.html" class="header-text header-item">
                 Hobbies
+              </a>
+            </li>
+            <li class="header-list-item">
+              <a href="/app.html" class="header-text header-item">
+                Seng 513 App
               </a>
             </li>
             <li class="header-list-item">
@@ -56,12 +61,11 @@
             <br />
             A Full Stack Software Developer
           </h1>
-          <button
-            id="resume-button"
-            onclick="document.location='/Resume-DylanWheeler.pdf'"
+          <a
+            href="https://drive.google.com/file/d/1KXD2JKudJTgsVoRRPRRx_eYj1DeQ7Aoj/view?usp=sharing"
           >
-            See My Resume
-          </button>
+            <button id="resume-button">See My Resume</button>
+          </a>
         </div>
       </div>
       <p id="cc-text">
