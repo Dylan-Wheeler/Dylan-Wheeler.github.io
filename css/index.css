@@ -280,8 +280,19 @@ li {
 .page-title {
   /* color: #f5d189; */
   color: #ffffff;
-  margin: auto;
+  /* margin: auto; */
   padding: 2rem;
+  margin-inline-start: 4rem;
+  width: max-content;
+  font-size: 2.5rem;
+}
+
+.page-title::after {
+  display: block;
+  content: "";
+  width: calc(100% + 3rem);
+  height: 2px;
+  background-color: #ffffff;
 }
 
 /*-- Project Page Contents --*/
@@ -324,6 +335,8 @@ li {
 .project-languages-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   grid-column: 2;
   grid-row: 2;
   padding: 0;
@@ -338,10 +351,9 @@ li {
   border-radius: 0.7rem;
   border: 2px solid;
   height: min-content;
-  width: min-content;
+  width: max-content;
   font-size: 0.7rem;
   padding-inline: 0.3rem;
-  margin-inline-end: 0.5rem;
   /* padding-block: 0.1rem; */
 }
 
