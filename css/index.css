@@ -378,8 +378,97 @@ li {
     margin: 0;
 }
 
+/*-- About Page Contents --*/
+#about-section {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: min-content;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    margin-bottom: 4rem;
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+    background-color: hsl(215, 50%, 5%);
+    border-radius: 1rem;
+}
+
+.about-img {
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 1rem;
+    border-color: #ffffff;
+    border: 2px solid;
+}
+
+.about-content {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin: 0;
+}
+
+.about-contact-info {
+    margin: 0;
+    grid-column: 1;
+    grid-row: 2;
+    width: max-content;
+}
+
+.about-table-holder {
+    padding: 2rem;
+    width: min-content;
+    margin-bottom: 4rem;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    background-color: hsl(215, 50%, 5%);
+    border-radius: 1rem;
+}
+
+.about-table-help {
+    overflow: hidden;
+    border-radius: 1rem;
+    margin: 0;
+}
+
+.about-table {
+    border-radius: 1rem;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+.about-table-c1 {
+    background-color: hsl(0, 0%, 20%);
+    border-right: 3px solid hsl(215, 50%, 5%);
+}
+
+.about-table-c2 {
+    background-color: hsl(0, 0%, 40%);
+}
+
+.about-table tr {
+    border-bottom: 3px solid hsl(215, 50%, 5%);
+}
+
+.about-table th {
+    padding: 0.75rem 2rem 0.75rem 2rem;
+    font-weight: bold;
+    backdrop-filter: brightness(1.3);
+}
+
+.about-table td {
+    padding: 1rem;
+    text-align: center;
+}
+
 /*-- Mobile Changes --*/
 @media only screen and (max-width: 650px) {
+    .body-text {
+        font-size: 0.8rem;
+    }
+
     .project-entry {
         grid-template-columns: 1fr;
         margin-inline-start: 2rem;
@@ -404,5 +493,37 @@ li {
     .project-desc {
         grid-column: 1;
         grid-row: 4;
+    }
+
+    #about-section {
+        grid-template-columns: 1fr;
+        margin-inline-start: 2rem;
+        margin-inline-end: 2rem;
+    }
+
+    .about-img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .about-content {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .about-contact-info {
+        grid-column: 1;
+        grid-row: 3;
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+
+    .about-contact-info::before {
+        content: "";
+        width: calc(100% - 1rem);
+        display: block;
+        height: 2px;
+        background: #ffffff;
+        transform: translate(0.5rem, -1.5rem);
     }
 }
