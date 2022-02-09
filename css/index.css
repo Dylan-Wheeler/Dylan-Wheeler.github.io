@@ -131,6 +131,7 @@ li {
     margin: 0;
     color: #ffffff;
     cursor: pointer;
+    height: min-content;
 }
 
 .header-icon {
@@ -322,8 +323,7 @@ li {
     border-radius: 1rem;
     /* border-top-right-radius: 0;
   border-bottom-right-radius: 0; */
-    border-color: #ffffff;
-    border: 2px solid;
+    border: 2px solid #ffffff;
     /* border-right: 3px solid; */
 }
 
@@ -398,8 +398,7 @@ li {
     grid-column: 1;
     grid-row: 1;
     border-radius: 1rem;
-    border-color: #ffffff;
-    border: 2px solid;
+    border: 2px solid #ffffff;
 }
 
 .about-content {
@@ -461,6 +460,50 @@ li {
 .about-table td {
     padding: 1rem;
     text-align: center;
+}
+
+/*-- Hobbies Page Contents --*/
+
+.hobbies-entry {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: min-content 1fr;
+    column-gap: 1.5rem;
+    row-gap: 0.5rem;
+    margin-bottom: 4rem;
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+    background-color: hsl(215, 50%, 5%);
+    border-radius: 1rem;
+}
+
+.hobbies-title {
+    display: block;
+    grid-row: 1;
+    grid-column: 2;
+    padding: 0;
+    margin: 0;
+    height: min-content;
+    font-size: x-large;
+}
+
+.hobbies-img {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 1;
+    width: 100%;
+    border-radius: 1rem;
+    border: 2px solid #ffffff;
+}
+
+.hobbies-description {
+    grid-row: 2;
+    grid-column: 2;
+    padding: 0;
+    margin: 0;
+    display: block;
+    height: min-content;
 }
 
 /*-- Mobile Changes --*/
@@ -525,5 +568,24 @@ li {
         height: 2px;
         background: #ffffff;
         transform: translate(0.5rem, -1.5rem);
+    }
+
+    .hobbies-entry {
+        grid-template-columns: 1fr;
+        margin-inline-start: 2rem;
+        margin-inline-end: 2rem;
+    }
+
+    .hobbies-img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .hobbies-title {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .hobbies-description {
+        grid-column: 1;
+        grid-row: 3;
     }
 }
