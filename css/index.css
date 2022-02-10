@@ -252,6 +252,10 @@ li {
 
 #seng513-app-info {
     margin: 2rem;
+    pointer-events: all;
+}
+#seng513-app-info a {
+    color: #ffffff;
 }
 
 /*-- Regular Page Contents --*/
