@@ -10,6 +10,7 @@
             media="all"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="../javascript/art-321-final.js"></script>
     </head>
     <body>
         <div class="overlay overlay-dark"></div>
@@ -84,60 +85,57 @@
                     </ul>
                 </nav>
             </div>
-            <div id="content">
-                <div id="content-block">
-                    <h1 class="page-title">Hobbies</h1>
-                    <div class="hobbies-entry">
-                        <h3 class="hobbies-title">Music</h3>
-                        <img
-                            class="hobbies-img"
-                            src="/images/jazz-performance.jpg"
-                        />
-                        <p class="hobbies-description body-text">
-                            From junior high band class to performing at paid
-                            gigs around the city, music has comprised a big part
-                            of my life ever since I was young. I play a variety
-                            of instruments ranging from strings like bass and
-                            guitar to drums and bass clarinet.
-                            <br />
-                            In my spare time, I enjoy playing around with new
-                            sounds in Ableton live and messing around on my
-                            bass, music acts as a great way to wind down and
-                            relax after a long day.
-                        </p>
-                    </div>
-                    <div class="hobbies-entry">
-                        <h3 class="hobbies-title">Skateboarding</h3>
-                        <img
-                            class="hobbies-img"
-                            src="/images/skateboarding-image.jpg"
-                        />
-                        <p class="hobbies-description body-text">
-                            Although decidedly an amateur, I've been enjoying
-                            learning how to perform tricks on my skateboard over
-                            the past couple years. When I've got time and the
-                            weather's right I also like to get out on my
-                            longboard to enjoy the parks and fresh air around
-                            the city!
-                        </p>
-                    </div>
-                    <div class="hobbies-entry">
-                        <h3 class="hobbies-title">Video Games</h3>
-                        <img
-                            class="hobbies-img"
-                            src="/images/hollow-knight-image.webp"
-                        />
-                        <p class="hobbies-description body-text">
-                            After my classes or just when I'm feeling the urge,
-                            I like to relax by playing some single-player video
-                            games such as my favorite, Hollow Knight. The
-                            freedom games bring to play however you want and
-                            explore remarkable stories is a great way to gain
-                            some relief from the stress of our everyday lives.
-                        </p>
-                    </div>
+            <div class="content">
+                <div id="final_body-container">
+                    <h1>Final Project</h1>
+                    <ul id="final_buttons">
+                        <li class="final_button">
+                            <p>Drums</p>
+                            <label class="switch">
+                                <input type="checkbox" id="check0" />
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+
+                        <li class="final_button">
+                            <p>Bass</p>
+                            <label class="switch">
+                                <input type="checkbox" id="check1" />
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+
+                        <li class="final_button">
+                            <p>Synth</p>
+                            <label class="switch">
+                                <input type="checkbox" id="check2" />
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+
+                        <li class="final_button">
+                            <p>Piano</p>
+                            <label class="switch">
+                                <input type="checkbox" id="check3" />
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+
+                        <li class="final_button">
+                            <p>Melody</p>
+                            <label class="switch">
+                                <input type="checkbox" id="check4" />
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                    </ul>
+                    <audio id="final_audio" controls loop>
+                        <source src="../audio/00000.wav" type="audio/wav" />
+                        <p>Your browser does not support the audio tag.</p>
+                    </audio>
                 </div>
             </div>
         </div>
+        <script src="../js/index.js"></script>
     </body>
 </html>
