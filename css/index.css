@@ -348,11 +348,11 @@ li {
 .project-title a {
     text-decoration: none;
     font-family: Cabin;
-    color: #ffffff;
+    color: hsl(194, 50%, 70%);
 }
 
 .project-title a:visited {
-    color: #ffffff;
+    color: hsl(194, 50%, 70%);
 }
 
 .project-languages-list {
