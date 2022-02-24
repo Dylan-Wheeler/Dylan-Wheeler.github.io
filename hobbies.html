@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dylan Wheeler</title>
+        <title>Hobbies</title>
         <link rel="icon" href="/images/websiteicon_optimized.png" />
         <link
             href="css/index.css"
@@ -12,12 +12,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <div class="overlay"></div>
+        <div class="overlay overlay-dark"></div>
         <div class="wrapper">
-            <div id="header" class="no-header-bar">
-                <h2 class="title title-large">Dylan Wheeler</h2>
+            <div id="header" class="header-bar">
+                <div class="header-overlay"></div>
+                <div class="header-img"></div>
+                <a href="/index.html">
+                    <h2 class="title title-small">Dylan Wheeler</h2>
+                </a>
                 <nav id="header-bar">
-                    <ul class="header-list header-list-large">
+                    <ul class="header-list header-list-small">
                         <li class="header-list-item">
                             <a
                                 href="/about.html"
@@ -52,7 +56,7 @@
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 496 512"
-                                    class="header-icon header-item header-icon-large"
+                                    class="header-icon header-item"
                                 >
                                     <!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
                                     <path
@@ -68,7 +72,7 @@
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 448 512"
-                                    class="header-item header-icon header-icon-large"
+                                    class="header-item header-icon"
                                 >
                                     <!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
                                     <path
@@ -80,31 +84,60 @@
                     </ul>
                 </nav>
             </div>
-            <div id="center-container">
-                <div id="center-content">
-                    <h1 id="center-text">
-                        Hi There! I'm Dylan,
-                        <br />
-                        A Full Stack Software Developer
-                    </h1>
-                    <a
-                        href="https://drive.google.com/file/d/1KXD2JKudJTgsVoRRPRRx_eYj1DeQ7Aoj/view?usp=sharing"
-                    >
-                        <button id="resume-button">See My Resume</button>
-                    </a>
-                    <div id="seng513-app-info">
-                        Feel free to check out some of my Javascript code in the
-                        <a href="/app.html"><i>Seng 513 App</i></a>
-                        section!
+            <div id="content">
+                <div id="content-block">
+                    <h1 class="page-title">Hobbies</h1>
+                    <div class="hobbies-entry">
+                        <h3 class="hobbies-title">Music</h3>
+                        <img
+                            class="hobbies-img"
+                            src="/images/jazz-performance.jpg"
+                        />
+                        <p class="hobbies-description body-text">
+                            From junior high band class to performing at paid
+                            gigs around the city, music has comprised a big part
+                            of my life ever since I was young. I play a variety
+                            of instruments ranging from strings like bass and
+                            guitar to drums and bass clarinet.
+                            <br />
+                            In my spare time, I enjoy playing around with new
+                            sounds in Ableton live and messing around on my
+                            bass, music acts as a great way to wind down and
+                            relax after a long day.
+                        </p>
+                    </div>
+                    <div class="hobbies-entry">
+                        <h3 class="hobbies-title">Skateboarding</h3>
+                        <img
+                            class="hobbies-img"
+                            src="/images/skateboarding-image.jpg"
+                        />
+                        <p class="hobbies-description body-text">
+                            Although decidedly an amateur, I've been enjoying
+                            learning how to perform tricks on my skateboard over
+                            the past couple years. When I've got time and the
+                            weather's right I also like to get out on my
+                            longboard to enjoy the parks and fresh air around
+                            the city!
+                        </p>
+                    </div>
+                    <div class="hobbies-entry">
+                        <h3 class="hobbies-title">Video Games</h3>
+                        <img
+                            class="hobbies-img"
+                            src="/images/hollow-knight-image.webp"
+                        />
+                        <p class="hobbies-description body-text">
+                            After my classes or just when I'm feeling the urge,
+                            I like to relax by playing some single-player video
+                            games such as my favorite, Hollow Knight. The
+                            freedom games bring to play however you want and
+                            explore remarkable stories is a great way to gain
+                            some relief from the stress of our everyday lives.
+                        </p>
                     </div>
                 </div>
             </div>
-            <p id="cc-text">
-                Image:
-                <a href="https://www.esa.int/ESA_Multimedia/Images" class="cc">
-                    The European Space Agency
-                </a>
-            </p>
         </div>
     </body>
 </html>
