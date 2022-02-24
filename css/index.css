@@ -265,14 +265,6 @@ li {
     padding: 1.5rem;
 }
 
-#seng513-app-info {
-    margin: 2rem;
-    pointer-events: all;
-}
-#seng513-app-info a {
-    color: #ffffff;
-}
-
 /*-- Regular Page Contents --*/
 .title-small {
     font-size: 2rem;
@@ -566,8 +558,8 @@ li {
         justify-content: center;
         top: 4.5rem;
         right: 0rem;
-        margin-inline-start: 0.5rem;
-        margin-inline-end: 0.5rem;
+        margin-inline-start: 2rem;
+        margin-inline-end: 2rem;
         justify-content: space-evenly;
     }
 
