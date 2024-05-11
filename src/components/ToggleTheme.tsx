@@ -3,7 +3,6 @@
 import { useTheme } from "next-themes"
 
 import React from 'react'
-import Image from 'next/image'
 
 function ToggleTheme() {
   const { theme, setTheme } = useTheme()
@@ -14,7 +13,7 @@ function ToggleTheme() {
 
   return (
     <button className="non-selectable" title="Toggle Color Scheme" onClick={() => toggleTheme()}>
-      <Image src={'/moon-icon2.svg'} alt="Toggle Color Scheme" width={"20"} height={"20"}/>
+      <span className="material-symbols-outlined">{theme === "light" ? "light_mode" : "dark_mode"}</span>
     </button>
   )
 }

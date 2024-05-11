@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
+import "./globalicons.scss";
 import Header from "@/components/Header";
 import { ThemeProvider } from "./providers";
 import { Inter, Crimson_Text, Nunito } from "next/font/google";

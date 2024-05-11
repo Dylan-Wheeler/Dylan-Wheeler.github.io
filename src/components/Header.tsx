@@ -7,10 +7,6 @@ import { usePathname } from 'next/navigation'
 
 function Header() {
   const pathname = usePathname();
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-  useEffect(() => {
-    setShowMobileMenu(false);
-  }, [pathname]);
 
   const [scrollTop, setScrollTop] = useState(0);
   useEffect(() => {
@@ -18,7 +14,6 @@ function Header() {
       setScrollTop(e.target.documentElement.scrollTop);
     }
     window.addEventListener('scroll', onScroll);
-    console.log(window.innerWidth)
   }, [scrollTop])
 
   const [isSmallDevice, setSmallDevice] = useState(false);
@@ -27,10 +22,9 @@ function Header() {
   }, [])
 
   return (
-    <header className={ showMobileMenu ? "show-mobile-menu" : "" + " " + (scrollTop > 80 || !isSmallDevice && scrollTop > 45 ? "smaller-header" : "") }>
+    <header className={ scrollTop > 80 || !isSmallDevice && scrollTop > 45 ? "smaller-header" : "" }>
         <div id='header-background' aria-hidden='true'></div>
-        <Link href={`/`} className='home-link'><h1>Dylan Wheeler</h1></Link>
-        <button id='nav-toggle' onClick={() => setShowMobileMenu(!showMobileMenu)} aria-label="Toggle navigation menu">X</button>
+        <Link href={`/`} className='home-link'><h1><span className='large-header-link'>Dylan Wheeler</span><span className='small-header-link'>DW</span></h1></Link>
         <Navigation />
     </header>
   )

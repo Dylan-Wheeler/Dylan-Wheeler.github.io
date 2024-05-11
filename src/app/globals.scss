@@ -80,22 +80,6 @@ ul {
     &:hover {
       opacity: 100%;
     }
-
-    &::after {
-      bottom: 0;
-      content: "";
-      display: block;
-      height: 1px;
-      background-color: rgb(var(--nav-text-rgb));
-      transition: width 0.3s ease-out 0s, opacity 0.3s ease-in 0s;
-      width: 0;
-      opacity: 0%;
-    }
-
-    &:hover::after {
-      width: 100%;
-      opacity: 100%;
-    }
   }
 
   .no-underline {
@@ -103,6 +87,33 @@ ul {
       display: none;
     }
   }
+}
+
+.nav-text {
+  &::after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: rgb(var(--nav-text-rgb));
+    transition: width 0.3s ease-out 0s, opacity 0.3s ease-in 0s;
+    width: 0;
+    opacity: 0%;
+    transform: translateY(1px);
+  }
+
+  &:hover::after {
+    width: 100%;
+    opacity: 100%;
+  }
+}
+
+.nav-icon {
+  display: none;
+}
+
+.small-header-link {
+  display: none;
 }
 
 header {
@@ -140,58 +151,50 @@ header {
   }
 }
 
-#nav-toggle {
-  display: none;
-}
-
 @media (max-width: 700px) {
   header {
     position: unset;
   }
 
-  @media not (prefers-reduced-motion) {
-    .smaller-header {
-      padding: var(--header-padding) var(--header-padding-small);
-    }
-  }
-
-  #nav-toggle {
+  .nav-list {
     position: fixed;
     right: var(--header-padding);
     top: var(--header-padding);
-    z-index: 3;
-    display: block;
-    font-size: xx-large;
-    font-family: var(--font-nunito);
-    color: rgb(var(--foreground-rgb));
-    line-height:1.8rem;
+    z-index: 1;
+    transition: right 0.2s ease, top 0.2s ease;
   }
 
-  .nav-list {
-    z-index: 2;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    flex-direction: column;
-    align-items: flex-end;
-    transition: right 0.2s ease 0s;
-    padding: 8rem var(--header-padding);
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(to left, rgb(var(--background-rgb), 1) 2rem, rgba(var(--background-rgb), 0) 40ch);
-    pointer-events: all;
-    overflow: hidden;
-    
-    li {
-      font-size: xx-large;
-      font-family: var(--font-nunito-light);
+  @media not (prefers-reduced-motion) {
+    .smaller-header {
+      padding: var(--header-padding) var(--header-padding-small);
+
+      .nav-list {
+        right: var(--header-padding-small);
+        top: var(--header-padding-small);
+      }
     }
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .nav-icon {
+    display: inline;
   }
 
   .show-mobile-menu {
     .nav-list {
       right: 0;
     }
+  }
+
+  .small-header-link {
+    display: inline;
+  }
+  
+  .large-header-link {
+    display: none;
   }
 }
 
