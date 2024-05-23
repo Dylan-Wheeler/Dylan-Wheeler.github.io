@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 250,
+  'GRAD' 0,
+  'opsz' 24;
+  font-size: 22px;
+}
+
 :root {
   --mobile-width: 700px;
   --content-width: 65ch;
@@ -175,10 +184,6 @@ header {
         top: var(--header-padding-small);
       }
     }
-
-    .theme-toggle-icon {
-      transition: rotate 0.2s ease;
-    }
   }
 
   .nav-text {
@@ -232,22 +237,5 @@ main {
 @media (max-width: 700px) {
   main {
     padding-block: 0 2rem;
-  }
-}
-
-.prose {
-  max-width: var(--content-width);
-  font-size: 1rem;
-  line-height: 1.75;
-  font-family: var(--font-nunito);
-  color: var(--paragraph-rgb);
-
-  h1 {
-    font-weight: 800;
-    font-size: 2.25em;
-    line-height: 1.1111111;
-    margin-block-end: 2rem;
-    color: rgb(var(--heading-rgb));
-    font-family: var(--font-crimson-text);
   }
 }

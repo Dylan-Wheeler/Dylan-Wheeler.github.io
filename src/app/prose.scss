@@ -1,0 +1,24 @@
+.prose {
+  max-width: var(--content-width);
+  font-size: 1rem;
+  line-height: 1.75;
+  font-family: var(--font-nunito);
+  color: var(--paragraph-rgb);
+
+  .page-title {
+    font-size: 2.25em;
+    margin-block-end: 2rem;
+  }
+
+  h1 {
+    color: rgb(var(--heading-rgb));
+    font-family: var(--font-crimson-text);
+    line-height: 1.1111111;
+    font-size: 2em;
+  }
+
+  h2 {
+    color: rgb(var(--heading-rgb));
+    font-family: var(--font-crimson-text);
+  }
+}
