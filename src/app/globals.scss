@@ -18,7 +18,7 @@
   --header-padding: 2rem;
   --header-padding-small: 1.5rem;
 
-  scrollbar-color: rgba(var(--foreground-rgb), 0.07)  rgb(var(--background-rgb));
+  scrollbar-color: rgba(var(--foreground-rgb), 0.07) rgb(var(--background-rgb));
 }
 
 .dark {
@@ -123,6 +123,7 @@ header {
   justify-content: space-between;
   position: fixed;
   width: 100%;
+  z-index: 5;
 }
 
 @media not (prefers-reduced-motion) {
@@ -133,7 +134,7 @@ header {
 
 #header-background {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   top: 0;
   background: linear-gradient(rgb(var(--background-rgb), 1) 0, rgba(var(--background-rgb), 0.65) 2rem, rgba(var(--background-rgb), 0) 5rem);
@@ -160,7 +161,7 @@ header {
     position: fixed;
     right: var(--header-padding);
     top: var(--header-padding);
-    z-index: 1;
+    z-index: 2;
     transition: right 0.2s ease, top 0.2s ease;
   }
 
@@ -181,12 +182,6 @@ header {
 
   .nav-icon {
     display: inline;
-  }
-
-  .show-mobile-menu {
-    .nav-list {
-      right: 0;
-    }
   }
 
   .small-header-link {
@@ -213,8 +208,37 @@ header {
   rotate: 45deg;
 }
 
+#scroll-top {
+  position: fixed;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: 2;
+
+  &:hover {
+    background-color: rgba(var(--foreground-rgb), 0.1);
+  }
+
+  span {
+    opacity: 50%;
+    transition: opacity 0.2s ease;
+  }
+
+  &:hover span {
+    opacity: 100%;
+  }
+}
+
+.removed {
+  pointer-events: none;
+  opacity: 0%;
+}
+
 main {
-  z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
