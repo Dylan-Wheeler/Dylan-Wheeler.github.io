@@ -14,9 +14,9 @@ function Post({ params }) {
   
   return (
     <main>
-      <article className="prose">
-        <h1 className="page-title">{data.title}</h1>
-        <h2>{new Date(data.date).toLocaleDateString()}</h2>
+      <article className="prose slide-enter-content">
+        <h1 className="page-title post-title">{data.title}</h1>
+        <h2 className="post-date">{new Date(data.date).toLocaleDateString("pdt", {timeZone: "UTC"})}</h2>
         <ReactMarkdown>
           {content}
         </ReactMarkdown>

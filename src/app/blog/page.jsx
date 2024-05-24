@@ -10,16 +10,18 @@ export default function Blog() {
   return (
     <>
       <main className={styles.main}>
-        This is the blog page!
-        {
-          blogPosts.map(post => (
-            <article key={post.slug}>
-              <Link href={`blog/posts/${post.slug}`}>
-                {post.title}
-              </Link>
-            </article>
-          ))
-        }
+        <article className="prose slide-enter-content">
+          <h1 className="page-title">This is the blog page!</h1>
+          {
+            blogPosts.sort((a, b) => {Date.parse(a.date) > Date.parse(b.date)}).map(post => (
+              <article key={post.slug}>
+                <Link href={`blog/posts/${post.slug}`}>
+                  {post.title}
+                </Link>
+              </article>
+            ))
+          }
+        </article>
       </main>
     </>
   );

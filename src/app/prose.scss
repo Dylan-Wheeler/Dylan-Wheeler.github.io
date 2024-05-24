@@ -1,24 +1,85 @@
+.page-title {
+  font-size: 2.25em;
+  margin-block-end: 2rem;
+}
+
+.post-title {
+  margin-block-end: auto;
+}
+
+.post-date {
+  margin-block-end: 2rem;
+  margin-inline-start: 1em;
+  margin: 0.4rem 0 2rem 1em;
+  color: var(--paragraph-rgb);
+  font-size: 1.1em;
+  opacity: 50%;
+  font-weight: 300;
+  font-family: var(--font-nunito);
+}
+
+h1 {
+  color: rgb(var(--heading-rgb));
+  font-family: var(--font-crimson-text);
+  line-height: 1.1111111;
+  font-size: 2em;
+}
+
+h2 {
+  color: rgb(var(--heading-rgb));
+  font-family: var(--font-crimson-text);
+}
+
 .prose {
   max-width: var(--content-width);
   font-size: 1rem;
   line-height: 1.75;
   font-family: var(--font-nunito);
   color: var(--paragraph-rgb);
+}
 
-  .page-title {
-    font-size: 2.25em;
-    margin-block-end: 2rem;
+// thx @antfu https://antfu.me/posts/sliding-enter-animation
+@keyframes slide-enter {
+  0% {
+    transform: translateX(0px) translateY(-5px);
+    opacity: 0
   }
 
-  h1 {
-    color: rgb(var(--heading-rgb));
-    font-family: var(--font-crimson-text);
-    line-height: 1.1111111;
-    font-size: 2em;
+  to {
+    transform: translateX(0) translateY(0);
+    opacity: 100
+  }
+}
+
+@media not (prefers-reduced-motion) {
+  .slide-enter-content > *:not(.page-title, .post-date) {
+    --enter-stage: 0;
+    --enter-step: 150ms;
+    --enter-initial: -300ms;
+    --acceleration: 3ms;
+    animation: slide-enter 1.5s both 1 ease;
+    animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step) - var(--enter-stage) * var(--enter-stage) * var(--acceleration));
   }
 
-  h2 {
-    color: rgb(var(--heading-rgb));
-    font-family: var(--font-crimson-text);
-  }
+  // pain
+  .slide-enter-content > *:nth-child(1) { --enter-stage: 1; }
+  .slide-enter-content > *:nth-child(2) { --enter-stage: 2; }
+  .slide-enter-content > *:nth-child(3) { --enter-stage: 3; }
+  .slide-enter-content > *:nth-child(4) { --enter-stage: 4; }
+  .slide-enter-content > *:nth-child(5) { --enter-stage: 5; }
+  .slide-enter-content > *:nth-child(6) { --enter-stage: 6; }
+  .slide-enter-content > *:nth-child(7) { --enter-stage: 7; }
+  .slide-enter-content > *:nth-child(8) { --enter-stage: 8; }
+  .slide-enter-content > *:nth-child(9) { --enter-stage: 9; }
+  .slide-enter-content > *:nth-child(10) { --enter-stage: 10; }
+  .slide-enter-content > *:nth-child(11) { --enter-stage: 11; }
+  .slide-enter-content > *:nth-child(12) { --enter-stage: 12; }
+  .slide-enter-content > *:nth-child(13) { --enter-stage: 13; }
+  .slide-enter-content > *:nth-child(14) { --enter-stage: 14; }
+  .slide-enter-content > *:nth-child(15) { --enter-stage: 15; }
+  .slide-enter-content > *:nth-child(16) { --enter-stage: 16; }
+  .slide-enter-content > *:nth-child(17) { --enter-stage: 17; }
+  .slide-enter-content > *:nth-child(18) { --enter-stage: 18; }
+  .slide-enter-content > *:nth-child(19) { --enter-stage: 19; }
+  .slide-enter-content > *:nth-child(20) { --enter-stage: 20; }
 }
