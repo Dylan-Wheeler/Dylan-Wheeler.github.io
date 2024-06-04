@@ -11,7 +11,7 @@ export default function Blog() {
     <>
       <main className={styles.main}>
         <article className="prose slide-enter-content">
-          <h1 className="page-title">This is the blog page!</h1>
+          <h1 className="page-title">Blog</h1>
           {
             blogPosts.sort((a, b) => {Date.parse(a.date) > Date.parse(b.date)}).map(post => (
               <article key={post.slug}>

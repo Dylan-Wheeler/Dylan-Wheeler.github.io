@@ -38,6 +38,10 @@ h2 {
   color: var(--paragraph-rgb);
 }
 
+.prose-large {
+  max-width: var(--content-width-large);
+}
+
 // thx @antfu https://antfu.me/posts/sliding-enter-animation
 @keyframes slide-enter {
   0% {
