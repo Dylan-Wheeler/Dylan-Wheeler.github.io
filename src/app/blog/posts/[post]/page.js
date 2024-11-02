@@ -5,12 +5,12 @@ export async function generateStaticParams() {
   const posts = getPosts()
  
   return posts.map((post) => ({
-    slug: post.slug,
+    post: post.slug,
   }))
 }
 
 function Post({ params }) {
-  const { data, content } = getPostContent(params.slug)
+  const { data, content } = getPostContent(params.post)
   
   return (
     <main>
