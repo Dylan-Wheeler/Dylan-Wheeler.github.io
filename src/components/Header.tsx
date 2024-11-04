@@ -25,9 +25,17 @@ function Header() {
     })
   }
 
+  const blurSteps = 28
+  const blurElements = [];
+  for (let i = 0; i < blurSteps; i++) {
+    blurElements.push(<div className='blur' key={i}></div>)
+  }
+
   return (
     <header className={ atPageTop > 80 || !isSmallDevice && atPageTop > 45 ? "smaller-header" : "" }>
-        <div id='header-background' aria-hidden='true'></div>
+        <div id='header-background' aria-hidden='true'>
+          {blurElements}
+        </div>
         <Link href={`/`} className='home-link'><h1><span className='large-header-link'>Dylan Wheeler</span><span className='small-header-link'>DW</span></h1></Link>
         <Navigation />
         <button id='scroll-top' className={atPageTop > 300 ? '' : 'removed'} onClick={setScrollTop}><span className="material-symbols-outlined">arrow_upward</span></button>
