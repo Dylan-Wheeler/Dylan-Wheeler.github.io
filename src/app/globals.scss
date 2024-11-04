@@ -7,6 +7,9 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
+  --heading-font: var(--font-crimson-text);
+  --content-font: var(--font-habibi);
+
   --translucent-item: 70%;
   --very-translucent-item: 50%;
   --transparent-item: 10%;
@@ -58,7 +61,7 @@ button {
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  font-family: var(--font-nunito);
+  font-family: var(--content-font);
 }
 
 a {
@@ -79,7 +82,7 @@ ul {
 
   li {
     z-index: 2;
-    font-family: var(--font-nunito);
+    font-family: var(--content-font);
     opacity: var(--translucent-item);
     transition: opacity 0.2s;
     &:hover {
@@ -249,7 +252,7 @@ $blur-distance-per-step-vertical: 4px;
 }
 
 .home-link {
-  font-family: var(--font-crimson-text);
+  font-family: var(--heading-font);
   font-size: large;
   text-wrap: nowrap;
   z-index: 2;
