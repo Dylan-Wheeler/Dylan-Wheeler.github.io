@@ -1,16 +1,17 @@
 .page-title {
-  font-size: 2.25em;
+  font-size: 3em;
   margin-block-end: 2rem;
 }
 
 .post-title {
+  font-size: 2.25em;
   margin-block-end: auto;
 }
 
 .post-date {
-  margin: 0.4rem 0 2rem 0;
   color: var(--paragraph-rgb);
-  font-size: 1.3em;
+  font-size: 1.2em;
+  line-height: normal;
   opacity: 50%;
   font-weight: 300;
 }
@@ -20,6 +21,7 @@ h1 {
   font-family: var(--font-crimson-text);
   line-height: 1.1111111;
   font-size: 2em;
+  margin-block-end: 0.3em;
 }
 
 h2 {
@@ -33,6 +35,10 @@ h2 {
   line-height: 1.75;
   font-family: var(--font-nunito);
   color: var(--paragraph-rgb);
+
+  p {
+    margin-block-end: 0.2em;
+  }
 }
 
 .prose-large {
@@ -53,7 +59,7 @@ h2 {
 }
 
 @media not (prefers-reduced-motion) {
-  .slide-enter-content > *:not(.page-title, .post-date) {
+  .slide-enter-content > *:not(.page-title, .post-date, .image-lightbox) {
     --enter-stage: 0;
     --enter-step: 150ms;
     --enter-initial: -300ms;

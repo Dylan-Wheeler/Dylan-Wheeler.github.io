@@ -8,6 +8,8 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --translucent-item: 70%;
+  --very-translucent-item: 50%;
+  --transparent-item: 10%;
 
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255,255,255;
@@ -25,8 +27,8 @@
 
 .dark {
   --foreground-rgb: 255, 255, 255;
-  --background-rgb: 0, 0, 0;
-  --background-lightness: 0%;
+  --background-rgb: 13, 13, 13;
+  --background-lightness: 5.1%;
   
   --heading-rgb: 255, 255, 255;
   --paragraph-rgb: rgb(187, 187, 187);
@@ -273,5 +275,32 @@ main {
 @media (max-width: 700px) {
   main {
     padding-block: 0 2rem;
+  }
+}
+
+hr {
+  border: 1px solid rgba(var(--foreground-rgb), var(--transparent-item));
+  width: 150px;
+  justify-self: center;
+  margin-block: 1.5rem;
+}
+
+footer {
+  .copyright-text {
+    color: rgba(var(--foreground-rgb), var(--very-translucent-item));
+    font-size: 0.8em;
+  }
+
+  a {
+    color: rgba(var(--foreground-rgb), var(--very-translucent-item));
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: rgba(var(--foreground-rgb), var(--translucent-item))
+    }
+  }
+
+  hr {
+    margin: 2.5rem;
   }
 }

@@ -1,6 +1,8 @@
 import styles from "./page.module.scss";
 import Link from 'next/link'
 import { getPosts } from './util/postUtils'
+import Footer from "@/components/Footer";
+import Article from "@/components/Article";
 
 // Lots of the blog handling code was sourced from https://www.singlehanded.dev/blog/building-markdown-blog-with-nextjs-app-router
 
@@ -10,7 +12,7 @@ export default function Blog() {
   return (
     <>
       <main className={styles.main}>
-        <article className="prose slide-enter-content">
+        <Article>
           <h1 className="page-title">Blog</h1>
           {
             blogPosts.sort((a, b) => {Date.parse(a.date) > Date.parse(b.date)}).map(post => (
@@ -21,7 +23,7 @@ export default function Blog() {
               </article>
             ))
           }
-        </article>
+        </Article>
       </main>
     </>
   );

@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer"
 import { getPostContent, getPosts } from "../../util/postUtils"
 import ReactMarkdown from 'react-markdown'
 
@@ -17,9 +18,11 @@ function Post({ params }) {
       <article className="prose slide-enter-content">
         <h1 className="page-title post-title">{data.title}</h1>
         <h2 className="post-date">{new Date(data.date).toLocaleDateString("pdt", {timeZone: "UTC"})}</h2>
+        <hr/>
         <ReactMarkdown>
           {content}
         </ReactMarkdown>
+        <Footer/>
       </article>
     </main>
   )
