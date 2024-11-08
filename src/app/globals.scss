@@ -1,6 +1,6 @@
 :root {
   --mobile-width: 700px;
-  --content-width: 65ch;
+  --content-width: 80ch;
   --content-width-large: 80ch;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -8,7 +8,9 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --heading-font: var(--font-crimson-text);
-  --content-font: var(--font-habibi);
+  --content-font: var(--font-benne);
+  --content-font-size: 1.1em;
+  --fancy-font: var(--font-mea-culpa);
 
   --translucent-item: 70%;
   --very-translucent-item: 50%;
@@ -64,9 +66,14 @@ body {
   font-family: var(--content-font);
 }
 
+p {
+  font-size: var(--content-font-size);
+}
+
 a {
   color: rgb(var(--heading-rgb));
   text-decoration: none;
+  font-size: var(--content-font-size);
 }
 
 ul {
@@ -140,9 +147,9 @@ header {
   }
 }
 
-$blur-steps-vertical: 28;
-$blur-amount-per-step-vertical: 0.04px;
-$blur-distance-per-step-vertical: 4px;
+$blur-steps: 28;
+$blur-amount-per-step: 0.04px;
+$blur-distance-per-step: 4px;
 
 @mixin gradual-blur(
   $steps-count,
@@ -188,9 +195,9 @@ $blur-distance-per-step-vertical: 4px;
   pointer-events: none;
 
   @include gradual-blur(
-      $blur-steps-vertical,
-      $blur-amount-per-step-vertical,
-      $blur-distance-per-step-vertical
+      $blur-steps,
+      $blur-amount-per-step,
+      $blur-distance-per-step
     );
 
   .blur {

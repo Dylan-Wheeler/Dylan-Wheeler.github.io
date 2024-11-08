@@ -1,16 +1,23 @@
 import Article from "@/components/Article";
+import Image from 'next/image'
 
 export default function Home() {
   return (
     <>
       <main>
         <Article>
-          <h1 className="page-title">Welcome</h1>
-          <p className="old-timey-text">Welcome to my page</p>
-          <br/>
+          <Image
+              className='inline-image'
+              src={`/photos/test-image.png`}
+              alt='This is what I look like'
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ aspectRatio: 5/6}}
+              />
           <h1>This is a second heading!</h1>
           <h2>And a third!</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p className="old-timey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <br/>
           <br/>
           <br/>
