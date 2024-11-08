@@ -8,7 +8,7 @@ export default function Home() {
         <Article>
           <Image
               className='inline-image'
-              src={`/photos/test-image.png`}
+              src={`/test-image.png`}
               alt='This is what I look like'
               width={0}
               height={0}
