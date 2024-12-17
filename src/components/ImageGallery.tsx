@@ -25,14 +25,14 @@ function ImageGallery(props: ImageGalleryProps) {
         lightboxImage !== '' && 
         <div className='image-lightbox'>
           <div className='image-lightbox-background' onClick={() => setLightboxImage('')}></div>
-            <Image
-              className='lightbox-image'
-              src={lightboxImage}
-              alt='lightbox image'
-              width={0}
-              height={0}
-              sizes="100vw"
-              />
+          <Image
+            className='lightbox-image'
+            src={lightboxImage}
+            alt='lightbox image'
+            width={0}
+            height={0}
+            sizes="100vw"
+            />
         </div>
       }
     </>

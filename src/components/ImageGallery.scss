@@ -20,9 +20,15 @@
   max-width: 100%;
   width: auto;
   height: max-content;
-  max-height: calc((var(--content-width-large) / 3 ) + 5.6rem);
+  max-height: calc(var(--content-width-large) / 2 + 18.5ch);
   vertical-align: bottom;
   cursor: pointer;
+}
+
+@media (max-width: calc(80ch + (42px * 2))) {
+  .gallery-image {
+    max-height: max-content;
+  }
 }
 
 .loaded {
