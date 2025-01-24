@@ -13,11 +13,11 @@ export default function Blog() {
     <>
       <main className={styles.main}>
         <Article>
-          <h1 className="page-title">Blog</h1>
+          <h1 className="page-title">Thoughts</h1>
           {
             blogPosts.sort((a, b) => {Date.parse(a.date) > Date.parse(b.date)}).map(post => (
               <article key={post.slug}>
-                <Link href={`blog/posts/${post.slug}`}>
+                <Link href={`thoughts/posts/${post.slug}`}>
                   {post.title}
                 </Link>
               </article>
