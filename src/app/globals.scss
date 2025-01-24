@@ -281,7 +281,7 @@ $blur-distance-per-step: 4px;
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: opacity 0.2s ease;
   z-index: 2;
   -webkit-tap-highlight-color: transparent;
 
