@@ -191,7 +191,7 @@ $blur-distance-per-step: 4px;
     hsla(0, 0%, var(--background-lightness), 0) 100%
   );
   width: 100%;
-  height: 5rem;
+  height: 7rem;
   pointer-events: none;
 
   @include gradual-blur(
