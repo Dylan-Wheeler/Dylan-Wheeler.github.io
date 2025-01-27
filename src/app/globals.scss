@@ -86,6 +86,7 @@ ul {
   gap: 1.5rem;
   text-decoration: none;
   transition: gap 0.2s ease-in-out;
+  pointer-events: auto;
 
   li {
     z-index: 2;
@@ -139,6 +140,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 5;
+  pointer-events: none;
 }
 
 @media not (prefers-reduced-motion) {
@@ -263,6 +265,7 @@ $blur-distance-per-step: 4px;
   font-size: large;
   text-wrap: nowrap;
   z-index: 2;
+  pointer-events: auto;
 }
 
 .light-mode-icon {
