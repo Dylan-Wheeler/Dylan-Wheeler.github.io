@@ -14,7 +14,7 @@ function ImageGallery(props: ImageGalleryProps) {
 
   return (
     <>
-      <ul className='image-gallery slide-enter-content'>
+      <ul className='image-gallery nested-slide-enter-content'>
         {props.images.map((image, key) => (
           <li className='gallery-image-item' key={key}>
             <GalleryImage imageUrl={image} setLightboxImage={setLightboxImage} />

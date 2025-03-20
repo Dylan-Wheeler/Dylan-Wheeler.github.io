@@ -15,8 +15,8 @@ function Header() {
 
   const [isSmallDevice, setSmallDevice] = useState(false);
   useEffect(() => {
-    setSmallDevice(window.innerWidth < 700)
-  }, [])
+    setSmallDevice(window.innerWidth < 700);
+  }, []);
 
   const setScrollTop = () => {
     window.scrollTo({
@@ -25,10 +25,10 @@ function Header() {
     })
   }
 
-  const blurSteps = 28
+  const blurSteps = 28;
   const blurElements = [];
   for (let i = 0; i < blurSteps; i++) {
-    blurElements.push(<div className='blur' key={i}></div>)
+    blurElements.push(<div className='blur' key={i}></div>);
   }
 
   return (

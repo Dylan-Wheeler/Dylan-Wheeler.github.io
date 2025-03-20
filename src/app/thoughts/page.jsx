@@ -14,7 +14,7 @@ export default function Blog() {
       <main className={styles.main}>
         <Article>
           <h1 className="page-title">Thoughts</h1>
-          <ul className="thoughts-list">
+          <ul className="thoughts-list nested-slide-enter-content">
           {
             blogPosts.sort((a, b) => {Date.parse(a.date) > Date.parse(b.date)}).map(post => (
               <li className="thoughts-list-item" key={post.slug}>
