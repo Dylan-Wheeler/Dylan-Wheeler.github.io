@@ -92,7 +92,7 @@ ul {
     z-index: 2;
     font-family: var(--content-font);
     opacity: var(--translucent-item);
-    transition: opacity 0.2s;
+    transition: opacity 0.2s ease-out;
     &:hover {
       opacity: 100%;
     }

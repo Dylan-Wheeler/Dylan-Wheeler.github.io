@@ -1,6 +1,6 @@
 import styles from "./page.module.scss";
 import Link from 'next/link'
-import { getPosts } from './util/postUtils'
+import { getPostContent, getPosts } from './util/postUtils'
 import Footer from "@/components/Footer";
 import Article from "@/components/Article";
 
@@ -14,15 +14,18 @@ export default function Blog() {
       <main className={styles.main}>
         <Article>
           <h1 className="page-title">Thoughts</h1>
+          <ul className="thoughts-list">
           {
             blogPosts.sort((a, b) => {Date.parse(a.date) > Date.parse(b.date)}).map(post => (
-              <article key={post.slug}>
-                <Link href={`thoughts/posts/${post.slug}`}>
+              <li className="thoughts-list-item" key={post.slug}>
+                <Link className="thoughts-list-item-text" href={`thoughts/posts/${post.slug}`}>
+                  <span className="thoughts-list-item-date">{new Date(post.date).toLocaleDateString("pdt", {timeZone: "UTC", year: "numeric", month: "short"})}</span>
                   {post.title}
                 </Link>
-              </article>
+              </li>
             ))
           }
+          </ul>
         </Article>
       </main>
     </>

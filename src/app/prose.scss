@@ -122,3 +122,33 @@ h2 {
   .slide-enter-content > *:nth-child(19) { --enter-stage: 19; }
   .slide-enter-content > *:nth-child(20) { --enter-stage: 20; }
 }
+
+.thoughts-list {
+  font-family: var(--heading-font);
+}
+
+.thoughts-list-item {
+  padding-block: 0.3rem;
+  font-size: 1em;
+}
+
+.thoughts-list-item-text {
+  opacity: var(--translucent-item);
+  transition: opacity 0.2s ease-out;
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.thoughts-list-item-date {
+  opacity: var(--very-translucent-item);
+  font-family: var(--paragraph-font);
+  font-size: 0.8em;
+
+  position: absolute;
+  right: 100%;
+  transform: translate(0, 4px);
+  white-space: nowrap;
+  padding-inline-end: 0.8rem;
+}
