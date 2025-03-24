@@ -1,3 +1,10 @@
+@import 'material-symbols/outlined.css';
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 50, 'opsz' 24;
+  margin: 0;
+}
+
 :root {
   --mobile-width: 700px;
   --content-width: 80ch;
@@ -78,6 +85,14 @@ a {
 
 ul {
   list-style: none;
+}
+
+.nav-item {
+  display: flex;
+
+  a {
+    display: flex;
+  }
 }
 
 .nav-list {
@@ -220,9 +235,6 @@ $blur-distance-per-step: 4px;
 }
 
 @media (max-width: 700px) {
-  header {
-    position: unset;
-  }
 
   .nav-list {
     position: fixed;
@@ -234,7 +246,7 @@ $blur-distance-per-step: 4px;
 
   @media not (prefers-reduced-motion) {
     .smaller-header {
-      padding: var(--header-padding) var(--header-padding-small);
+      padding: var(--header-padding-small) var(--header-padding-small);
 
       .nav-list {
         right: var(--header-padding-small);
@@ -280,22 +292,32 @@ $blur-distance-per-step: 4px;
   position: fixed;
   bottom: 0.75rem;
   right: 0.75rem;
+  z-index: 2;
+  transition: all 0.2s ease
+}
+
+.icon-button {
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
-  transition: opacity 0.2s ease;
-  z-index: 2;
+  transition: opacity,border 0.2s ease;
   -webkit-tap-highlight-color: transparent;
   pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(var(--background-rgb), var(--translucent-item));
+  border: 1px solid rgba(var(--background-rgb), var(--transparent-item));
 
   &:hover {
-    background: radial-gradient(rgba(var(--foreground-rgb), 0.1), rgba(var(--foreground-rgb), 0.01));
+    border: 1px solid rgba(var(--foreground-rgb), var(--transparent-item));
   }
 
   span {
     opacity: 50%;
     transition: opacity 0.2s ease;
+    margin-block-end: 0!important;
   }
 
   &:hover span {
@@ -315,12 +337,6 @@ main {
   min-height: 100vh;
   padding-inline: 1.75rem;
   padding-block: 7rem 2rem;
-}
-
-@media (max-width: 700px) {
-  main {
-    padding-block: 0 2rem;
-  }
 }
 
 hr {

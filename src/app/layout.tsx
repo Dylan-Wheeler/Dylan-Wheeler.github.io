@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "./global-icons.scss";
 import "./globals.scss";
 import "./prose.scss";
 // import dynamic from 'next/dynamic'

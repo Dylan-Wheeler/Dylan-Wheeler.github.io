@@ -38,7 +38,7 @@ function Header() {
         </div>
         <Link href={`/`} className='home-link'><h1><span className='large-header-link'>Dylan Wheeler</span><span className='small-header-link'>DW</span></h1></Link>
         <Navigation />
-        <button id='scroll-top' className={atPageTop > 300 ? '' : 'removed'} onClick={setScrollTop}><span className="material-symbols-outlined">arrow_upward</span></button>
+        <button id='scroll-top' className={atPageTop > 300 ? 'icon-button' : 'icon-button removed'} onClick={setScrollTop}><span className="material-symbols-outlined">arrow_upward</span></button>
     </header>
   )
 }

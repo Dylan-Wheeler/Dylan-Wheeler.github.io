@@ -11,6 +11,7 @@
   "dependencies": {
     "framer-motion": "^11.1.9",
     "gray-matter": "^4.0.3",
+    "material-symbols": "^0.29.2",
     "next": "14.2.10",
     "next-themes": "^0.3.0",
     "react": "^18",
