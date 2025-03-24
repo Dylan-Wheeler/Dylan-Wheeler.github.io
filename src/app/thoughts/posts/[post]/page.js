@@ -22,7 +22,7 @@ function Post({ params }) {
         </div>
 
         <h1 className="page-title post-title">{data.title}</h1>
-        <h2 className="post-date">{new Date(data.date).toLocaleDateString("pdt", {timeZone: "UTC"})}</h2>
+        <h2 className="post-date">{new Date(data.date).toLocaleDateString("pdt", {timeZone: "UTC", year: "numeric", day: "numeric", month: "long"})}</h2>
         <hr/>
         <ReactMarkdown>
           {content}
