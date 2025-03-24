@@ -224,6 +224,37 @@ $blur-distance-per-step: 4px;
   }
 }
 
+@keyframes page-wipe {
+  0% {
+    top: 0; // Page cover size
+    height: 7rem; // Blur size
+  }
+
+  40% {
+    top: 0;
+  }
+
+  to {
+    top: 100vh;
+    height: 50rem;
+  }
+}
+
+@media not (prefers-reduced-motion) {
+  .animate-page-out{
+    animation: page-wipe 0.5s forwards 1 ease-out;
+  }
+}
+
+.page-cover {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  top: -100vh;
+  background: rgb(var(--background-rgb));
+}
+
 @media (max-width: 1400px) {
   .nav-list {
     gap: 1rem;
@@ -337,7 +368,11 @@ main {
   min-height: 100vh;
   padding-inline: 1.75rem;
   padding-block: 7rem 2rem;
+
+  // transition: opacity,filter ease 500ms;
 }
+
+
 
 hr {
   border: 1px solid rgba(var(--foreground-rgb), var(--transparent-item));
