@@ -36,7 +36,7 @@ export function TransitionLink({
 
       pageCover?.classList.add("animate-page-out")
 
-      await wait(500)
+      await wait(300) // This should be kept equal to the animate-page-out duration in globals.scss
 
       router.push(href);
     }

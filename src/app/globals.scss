@@ -224,35 +224,26 @@ $blur-distance-per-step: 4px;
   }
 }
 
-@keyframes page-wipe {
-  0% {
-    top: 0; // Page cover size
-    height: 7rem; // Blur size
-  }
-
-  40% {
-    top: 0;
-  }
-
-  to {
-    top: 100vh;
-    height: 50rem;
-  }
+.page-cover {
+  position: fixed;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgb(var(--background-rgb));
+  pointer-events: none;
+  opacity: 0%;
 }
 
 @media not (prefers-reduced-motion) {
   .animate-page-out{
-    animation: page-wipe 0.5s forwards 1 ease-out;
+    .page-cover {
+      display: block;
+      opacity: 100%;
+      transition: opacity 0.3s ease-out;
+    }
   }
-}
-
-.page-cover {
-  position: relative;
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  top: -100vh;
-  background: rgb(var(--background-rgb));
 }
 
 @media (max-width: 1400px) {
