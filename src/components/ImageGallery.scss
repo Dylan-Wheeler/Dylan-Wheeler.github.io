@@ -14,13 +14,11 @@
 
 .gallery-image {
   position: relative;
-  width: auto;
+  width: 24rem;
+  height: 24rem;
   opacity: 0;
-  object-fit: contain;
+  object-fit: cover;
   max-width: 100%;
-  width: auto;
-  height: max-content;
-  max-height: calc(var(--content-width-large) / 2 + 18.5ch);
   vertical-align: bottom;
   cursor: pointer;
 }

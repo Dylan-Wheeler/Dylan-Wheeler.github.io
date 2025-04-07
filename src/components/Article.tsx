@@ -4,6 +4,7 @@ import Footer from './Footer'
 export enum ArticleSize {
   Large = 'large',
   Regular = 'regular',
+  Gallery = 'gallery',
 }
 
 type ArticleProps = {
@@ -12,7 +13,7 @@ type ArticleProps = {
 }
 
 function Article(props: ArticleProps) {
-  const articleClass = `prose slide-enter-content ${props.size === ArticleSize.Large ? "prose-large" : ""}`;
+  const articleClass = `prose slide-enter-content ${props.size === ArticleSize.Large ? "prose-large" : ""} ${props.size === ArticleSize.Gallery ? "prose-gallery" : ""}`;
   return (
     <article className={articleClass}>
       {props.children}

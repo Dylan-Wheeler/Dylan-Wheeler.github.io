@@ -9,7 +9,7 @@ export default function Photography() {
   return (
     <>
       <main className={styles.main}>
-        <Article size={ArticleSize.Large}>
+        <Article size={ArticleSize.Gallery}>
           <h1 className="page-title">Photography</h1>
           <ImageGallery images={allPhotos} />
         </Article>

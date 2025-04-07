@@ -51,6 +51,10 @@ h2 {
   max-width: var(--content-width-large);
 }
 
+.prose-gallery {
+  max-width: 75rem;
+}
+
 .inline-image {
   height: auto;
   width: calc(var(--content-width) / 3);
