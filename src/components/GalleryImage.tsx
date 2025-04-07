@@ -19,8 +19,12 @@ function GalleryImage(props: GalleryImageProps) {
         className={'gallery-image ' + loadingStatus}
         src={props.imageUrl}
         alt='photography page photo'
-        width={0}
-        height={0}
+        width={500}
+        height={500}
+        style={{
+          width: '24rem',
+          height: '24rem',
+        }}
         sizes="100vw"
         onLoad={() => setLoadingStatus('loaded')}
         onClick={() => props.setLightboxImage(props.imageUrl)}

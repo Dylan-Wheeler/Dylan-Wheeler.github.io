@@ -19,7 +19,6 @@ const habibi = Habibi({ subsets: ["latin"], weight: "400", variable: '--font-hab
 const metamorphous = Metamorphous({ subsets: ["latin"], weight: "400", variable: '--font-metamorphous'});
 const mea_culpa = Mea_Culpa({ subsets: ["latin"], weight: "400", variable: '--font-mea-culpa'});
 
-
 export const metadata: Metadata = {
   title: "Dylan Wheeler",
   description: "Dylan Wheeler's personal website",
