@@ -90,6 +90,7 @@ ul {
 .nav-item {
   display: flex;
   align-items: center;
+  min-width: 24px;
 
   a {
     display: flex;
