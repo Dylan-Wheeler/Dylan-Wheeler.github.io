@@ -4,6 +4,7 @@ import "./prose.scss";
 // import dynamic from 'next/dynamic'
 // const Header = dynamic(() => import('@/components/Header'), { ssr: false })
 import Header from "@/components/Header";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { ThemeProvider } from "./providers";
 import { Inter, Crimson_Text, Nunito, Benne, Habibi, Metamorphous, Mea_Culpa } from "next/font/google";
@@ -31,6 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${crimson_text.variable} ${nunito.variable} ${nunito_light.variable} ${benne.variable} ${habibi.variable} ${metamorphous.variable} ${mea_culpa.variable}`}>
+      <GoogleAnalytics gaId="G-ZDX8HFDJXP" />
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"

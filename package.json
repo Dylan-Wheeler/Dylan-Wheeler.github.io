@@ -10,6 +10,7 @@
     "prepare-images": "./scripts/ResizeImages.cmd"
   },
   "dependencies": {
+    "@next/third-parties": "^16.0.7",
     "framer-motion": "^11.1.9",
     "gray-matter": "^4.0.3",
     "material-symbols": "^0.29.2",
